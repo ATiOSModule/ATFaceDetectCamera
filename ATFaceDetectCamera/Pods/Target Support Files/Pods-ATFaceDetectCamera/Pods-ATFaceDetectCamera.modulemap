@@ -1,0 +1,6 @@
+framework module Pods_ATFaceDetectCamera {
+  umbrella header "Pods-ATFaceDetectCamera-umbrella.h"
+
+  export *
+  module * { export * }
+}

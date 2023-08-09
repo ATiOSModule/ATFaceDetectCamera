@@ -1,0 +1,22 @@
+{
+  "name": "ATBaseExtensions",
+  "version": "0.0.2",
+  "summary": "An extension collection  of ios swift",
+  "homepage": "https://github.com/ATiOSModule/ATBaseExtensions",
+  "authors": {
+    "Nguyen Anh Tuan": "nguyenanhtuan25122001@gmail.com"
+  },
+  "license": "MIT",
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source": {
+    "git": "https://github.com/ATiOSModule/ATBaseExtensions.git",
+    "tag": "0.0.2"
+  },
+  "source_files": [
+    "ATBaseExtensions",
+    "ATBaseExtensions/ATBaseExtensions/**/*.{h,m,mm,swift}"
+  ],
+  "exclude_files": "ATBaseExtensions/Exclude/**"
+}
