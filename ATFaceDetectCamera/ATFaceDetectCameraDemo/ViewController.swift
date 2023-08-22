@@ -42,11 +42,11 @@ class ViewController: UIViewController {
 extension ViewController: ATCameraViewDelegate {
     
     func cameraViewOutput(sender: ATCameraViewInterface, faceImage: UIImage, fullImage: UIImage, boundingBox: CGRect) {
-        
+        print("Success: \(boundingBox)")
     }
     
     func cameraViewOutput(sender: ATCameraViewInterface, invalidFace: VNFaceObservation, invalidType: ATCameraView.FaceState) {
-        
+        print("SuccessNot: \(invalidType)")
     }
     
 }

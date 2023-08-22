@@ -42,6 +42,7 @@ open class ATCameraView: UIView  {
         case faceTooAlignDown
         case faceTooSmall
         case faceTooBig
+        case faceIsNotCenter
     }
     
     //MARK: UI Component
@@ -140,8 +141,7 @@ extension ATCameraView: ATCameraViewInterface {
         setupCamera()
         startCaptureFace = false
         
-        DispatchQueue.global(qos: .userInteractive)
-            .asyncAfter(deadline: .now() + 0.5) { [weak self] in
+        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
                          
             if self?.avSession != nil {
                 self?.avSession?.startRunning()
@@ -150,7 +150,7 @@ extension ATCameraView: ATCameraViewInterface {
         }
         
         DispatchQueue.global(qos: .userInteractive)
-            .asyncAfter(deadline: .now() + 2) {  [weak self] in
+            .asyncAfter(deadline: .now() + 1) {  [weak self] in
                 
             self?.startCaptureFace = true
                 

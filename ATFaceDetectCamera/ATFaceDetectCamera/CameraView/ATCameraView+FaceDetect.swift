@@ -80,9 +80,19 @@ extension ATCameraView {
     
     fileprivate func handleValidFace(from sampleBuffer: CMSampleBuffer, pixelBuffer: CVPixelBuffer, result: VNFaceObservation) {
         
-        if checkValidHeadPoseEstimation(result: result) && checkValidFaceBoundRatio(result: result) {
-            self.captureFace(from: sampleBuffer, pixelBuffer: pixelBuffer, result: result)
+        if checkValidCenterFace(result: result) == false {
+            return
         }
+        
+        if checkValidFaceBoundRatio(result: result) == false {
+            return
+        }
+        
+        if checkValidHeadPoseEstimation(result: result) == false {
+            return
+        }
+        
+        self.captureFace(from: sampleBuffer, pixelBuffer: pixelBuffer, result: result)
        
     }
     
@@ -105,7 +115,7 @@ extension ATCameraView {
                                         faceImage: faceImage,
                                         fullImage: flipFullImage,
                                         boundingBox: result.boundingBox)
-        self.stopCamera()
+//        self.stopCamera()
         
     }
     
@@ -128,7 +138,7 @@ extension ATCameraView {
         let resultYawDegress: Double = 180.0 * yaw / Double.pi
         let resultPitchDegress: Double = 180.0 * pitch / Double.pi
         
-        print("Roll : \(resultRollDegress) ~~~~~ Pitch : \(resultPitchDegress)  ~~~~~ Yaw : \(resultYawDegress)")
+//        print("Roll : \(resultRollDegress) ~~~~~ Pitch : \(resultPitchDegress)  ~~~~~ Yaw : \(resultYawDegress)")
      
         if abs(resultRollDegress) > 20 {
             
@@ -183,6 +193,20 @@ extension ATCameraView {
         }
         
         return true
+    }
+    
+    fileprivate func checkValidCenterFace(result: VNFaceObservation) -> Bool {
+        
+        let resuldCenterX = result.boundingBox.midX
+        let resuldCenterY = result.boundingBox.midY
+        
+        if abs(resuldCenterX - 0.5) > 0.1 || abs(resuldCenterY - 0.5) > 0.1 {
+            self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceIsNotCenter)
+            return false
+        }
+        
+        return true
+        
     }
     
 }
