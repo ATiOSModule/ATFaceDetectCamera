@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.exclude_files = "ATFaceDetectCamera/Exclude/**"
 
   # Dependencies
-  s.dependency 'ATBaseExtensions', :git => 'https://github.com/ATiOSModule/ATBaseExtensions.git', :tag => '0.0.2'
+  s.dependency 'ATBaseExtensions', '~> 0.0.2'
 
   # Deployment
   s.ios.deployment_target = '11.0'
