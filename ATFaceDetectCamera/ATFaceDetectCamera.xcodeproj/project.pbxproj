@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860015292A8F58010067A008 /* ATCameraView+CameraSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860015282A8F58010067A008 /* ATCameraView+CameraSetup.swift */; };
+		8600152B2A8F5CE20067A008 /* ATCameraView+FaceDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8600152A2A8F5CE20067A008 /* ATCameraView+FaceDetect.swift */; };
 		86AD51E42A83F36C0024B173 /* ATFaceDetectCamera.docc in Sources */ = {isa = PBXBuildFile; fileRef = 86AD51E32A83F36C0024B173 /* ATFaceDetectCamera.docc */; };
 		86AD51E52A83F36C0024B173 /* ATFaceDetectCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 86AD51E22A83F36C0024B173 /* ATFaceDetectCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86AD51F22A83F3890024B173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AD51F12A83F3890024B173 /* AppDelegate.swift */; };
@@ -51,6 +53,8 @@
 		414570250F3658634AB3ABE7 /* Pods-ATFaceDetectCameraDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATFaceDetectCameraDemo.release.xcconfig"; path = "Target Support Files/Pods-ATFaceDetectCameraDemo/Pods-ATFaceDetectCameraDemo.release.xcconfig"; sourceTree = "<group>"; };
 		6E3AAB20936DDF933534B60B /* Pods-ATFaceDetectCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATFaceDetectCamera.release.xcconfig"; path = "Target Support Files/Pods-ATFaceDetectCamera/Pods-ATFaceDetectCamera.release.xcconfig"; sourceTree = "<group>"; };
 		84C5D3DE6BF8AEF9A6C16FA8 /* Pods_ATFaceDetectCameraDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATFaceDetectCameraDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		860015282A8F58010067A008 /* ATCameraView+CameraSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ATCameraView+CameraSetup.swift"; sourceTree = "<group>"; };
+		8600152A2A8F5CE20067A008 /* ATCameraView+FaceDetect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ATCameraView+FaceDetect.swift"; sourceTree = "<group>"; };
 		86AD51DF2A83F36C0024B173 /* ATFaceDetectCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ATFaceDetectCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86AD51E22A83F36C0024B173 /* ATFaceDetectCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATFaceDetectCamera.h; sourceTree = "<group>"; };
 		86AD51E32A83F36C0024B173 /* ATFaceDetectCamera.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ATFaceDetectCamera.docc; sourceTree = "<group>"; };
@@ -123,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				86AD520E2A83F5310024B173 /* FaceDetector */,
-				86AD520D2A83F5240024B173 /* Views */,
+				86AD520D2A83F5240024B173 /* CameraView */,
 				86AD51E22A83F36C0024B173 /* ATFaceDetectCamera.h */,
 				86AD51E32A83F36C0024B173 /* ATFaceDetectCamera.docc */,
 			);
@@ -153,12 +157,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		86AD520D2A83F5240024B173 /* Views */ = {
+		86AD520D2A83F5240024B173 /* CameraView */ = {
 			isa = PBXGroup;
 			children = (
 				86AD520B2A83F4A00024B173 /* ATCameraView.swift */,
+				860015282A8F58010067A008 /* ATCameraView+CameraSetup.swift */,
+				8600152A2A8F5CE20067A008 /* ATCameraView+FaceDetect.swift */,
 			);
-			path = Views;
+			path = CameraView;
 			sourceTree = "<group>";
 		};
 		86AD520E2A83F5310024B173 /* FaceDetector */ = {
@@ -348,6 +354,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8600152B2A8F5CE20067A008 /* ATCameraView+FaceDetect.swift in Sources */,
+				860015292A8F58010067A008 /* ATCameraView+CameraSetup.swift in Sources */,
 				86AD520C2A83F4A00024B173 /* ATCameraView.swift in Sources */,
 				86AD51E42A83F36C0024B173 /* ATFaceDetectCamera.docc in Sources */,
 			);
@@ -589,6 +597,7 @@
 				DEVELOPMENT_TEAM = S3Y6BJQ8MM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ATFaceDetectCameraDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App need camera access";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -619,6 +628,7 @@
 				DEVELOPMENT_TEAM = S3Y6BJQ8MM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ATFaceDetectCameraDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App need camera access";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
