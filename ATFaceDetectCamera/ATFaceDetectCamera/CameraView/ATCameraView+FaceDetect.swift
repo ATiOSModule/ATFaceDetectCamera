@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 import AVFoundation
 import Vision
 
@@ -25,46 +26,163 @@ extension ATCameraView: AVCaptureVideoDataOutputSampleBufferDelegate {
 
 extension ATCameraView {
     
-    func detectFace(from sampleBuffer: CMSampleBuffer, pixelBuffer: CVImageBuffer) {
+    fileprivate func detectFace(from sampleBuffer: CMSampleBuffer, pixelBuffer: CVPixelBuffer) {
+        
+        if self.startCaptureFace == false {
+            return
+        }
         
         let faceDispatchGroup = DispatchGroup()
         
-        var faceLandmarkResults: [VNFaceObservation] = []
-       
-        //VNDetectFaceLandmarksRequest to get roll, yaw, and boundingBox
+        var faceRectResults: [VNFaceObservation] = []
+        
+        //VNDetectFaceRectanglesRequest to get pitch
         faceDispatchGroup.enter()
-        let faceDetectionLandmarRequest = VNDetectFaceLandmarksRequest(completionHandler: { (request: VNRequest, error: Error?) in
+        let faceDetectRectangleRequest = VNDetectFaceRectanglesRequest() { (request: VNRequest, error: Error?) in
             
             if let results = request.results as? [VNFaceObservation] {
-                faceLandmarkResults = results
+                faceRectResults = results
             }
             faceDispatchGroup.leave()
             
-        })
+        }
+        
+        //VNDetectFaceLandmarksRequest to get roll, yaw, and boundingBox
+//        faceDispatchGroup.enter()
+//        let faceDetectionLandmarRequest = VNDetectFaceLandmarksRequest(completionHandler: { (request: VNRequest, error: Error?) in
+//
+//            if let results = request.results as? [VNFaceObservation] {
+//                faceLandmarkResults = results
+//            }
+//            faceDispatchGroup.leave()
+//
+//        })
         
         //Handle face response after all request finish
         faceDispatchGroup.notify(queue: .main) { [weak self] in
             
-            guard let result = faceLandmarkResults.first else {
+            guard let result = faceRectResults.first else {
                 return
             }
             
             let confidence = result.confidence
-            print("confidence: \(confidence)")
             if confidence > 0.5 {
-                self?.handleFaceCaptured(from: sampleBuffer, pixelBuffer: pixelBuffer, result: result)
+                self?.handleValidFace(from: sampleBuffer, pixelBuffer: pixelBuffer, result: result)
             }
             
         }
         
         //Begin request
         let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
-        try? imageRequestHandler.perform([faceDetectionLandmarRequest])
+        try? imageRequestHandler.perform([faceDetectRectangleRequest])
         
     }
     
-    func handleFaceCaptured(from sampleBuffer: CMSampleBuffer, pixelBuffer: CVImageBuffer, result: VNFaceObservation) {
+    fileprivate func handleValidFace(from sampleBuffer: CMSampleBuffer, pixelBuffer: CVPixelBuffer, result: VNFaceObservation) {
         
+        if checkValidHeadPoseEstimation(result: result) && checkValidFaceBoundRatio(result: result) {
+            self.captureFace(from: sampleBuffer, pixelBuffer: pixelBuffer, result: result)
+        }
+       
+    }
+    
+    fileprivate func captureFace(from sampleBuffer: CMSampleBuffer, pixelBuffer: CVPixelBuffer, result: VNFaceObservation) {
+        
+        guard let fullImage: UIImage = UIImage(pixelBuffer: pixelBuffer),
+              let fullCGImage = fullImage.cgImage  else {
+            return
+        }
+        
+        guard let flipFullCGImage = fullCGImage.rotating(to: .upMirrored),
+              let faceCGImage = fullCGImage.cropImage(objectObservation: result)?.rotating(to: .upMirrored) else {
+            return
+        }
+        
+        let faceImage = UIImage(cgImage: faceCGImage)
+        let flipFullImage = UIImage(cgImage: flipFullCGImage)
+        
+        self.delegate?.cameraViewOutput(sender: self,
+                                        faceImage: faceImage,
+                                        fullImage: flipFullImage,
+                                        boundingBox: result.boundingBox)
+        self.stopCamera()
+        
+    }
+    
+}
+
+//MARK: Handle Valid Face
+extension ATCameraView {
+    
+    ///Handle face rol-pitch-yall
+    fileprivate func checkValidHeadPoseEstimation(result: VNFaceObservation) -> Bool {
+        
+        let roll: Double = result.roll?.doubleValue ?? 0
+        let yaw: Double = result.yaw?.doubleValue ?? 0
+        var pitch: Double = 0
+        if #available(iOS 15.0, *) {
+            pitch = result.pitch?.doubleValue ?? 0
+        }
+        
+        let resultRollDegress: Double = 180.0 * roll / Double.pi
+        let resultYawDegress: Double = 180.0 * yaw / Double.pi
+        let resultPitchDegress: Double = 180.0 * pitch / Double.pi
+        
+        print("Roll : \(resultRollDegress) ~~~~~ Pitch : \(resultPitchDegress)  ~~~~~ Yaw : \(resultYawDegress)")
+     
+        if abs(resultRollDegress) > 20 {
+            
+            if resultRollDegress > 0 {
+                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooLeaningRight)
+            } else {
+                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooLeaningLeft)
+            }
+            
+            return false
+        }
+        
+        if abs(resultYawDegress) > 20 {
+            
+            if resultYawDegress > 0 {
+                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooLeaningRight)
+            } else {
+                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooLeaningLeft)
+            }
+            
+            return false
+        }
+        
+        if abs(resultPitchDegress) > 15 {
+            
+            if abs(resultPitchDegress) > 0 {
+                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooAlignDown)
+            } else {
+                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooAlignUp)
+            }
+            
+            return false
+        }
+        
+        return true
+        
+    }
+    
+    fileprivate func checkValidFaceBoundRatio(result: VNFaceObservation) -> Bool {
+
+        let ratio = Int(result.boundingBox.width * 100)
+
+        if ratio < 30 {
+            
+            self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooSmall)
+            return false
+        }
+        
+        if ratio > 60 {
+            self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooBig)
+            return false
+        }
+        
+        return true
     }
     
 }

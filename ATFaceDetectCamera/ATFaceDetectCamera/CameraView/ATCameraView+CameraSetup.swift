@@ -38,7 +38,7 @@ extension ATCameraView {
         avSession.automaticallyConfiguresCaptureDeviceForWideColor = true
         avSession.sessionPreset = .high
         
-        var defaultVideoDevice: AVCaptureDevice? = deviceDiscoverySession.devices.first
+        let defaultVideoDevice: AVCaptureDevice? = deviceDiscoverySession.devices.first
         guard let videoDevice = defaultVideoDevice else {
             fatalError("Cannot find any camera device")
         }
@@ -69,10 +69,18 @@ extension ATCameraView {
             return
         }
         if avSession.canAddOutput(videoDataOutput) {
+            
             videoDataOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_32BGRA)]
             videoDataOutput.alwaysDiscardsLateVideoFrames = true
             videoDataOutput.setSampleBufferDelegate(self, queue: videoOutputQueue)
             avSession.addOutput(videoDataOutput)
+           
+            guard let connection = self.videoDataOutput?.connection(with: AVMediaType.video),
+                  connection.isVideoOrientationSupported else {
+                return
+            }
+            connection.videoOrientation = .portrait
+            
         } else {
             fatalError("Could not add video data output to the session")
         }

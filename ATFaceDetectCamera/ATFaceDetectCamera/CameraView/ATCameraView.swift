@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import AVFoundation
 import ATBaseExtensions
+import Vision
 
 extension UIView {
     convenience init(autoLayout: Bool) {
@@ -19,21 +20,28 @@ extension UIView {
     }
 }
 
-public protocol ATCameraViewInterface {
+public protocol ATCameraViewInterface: UIView {
     func setDelegate(_ delegate: ATCameraViewDelegate)
     func startCamera()
     func stopCamera()
 }
 
 public protocol ATCameraViewDelegate: NSObject {
-    func cameraViewOutput(sender: ATCameraViewDelegate, faceImage: UIImage, fullImage: UIImage, boundingBox: CGRect)
+    func cameraViewOutput(sender: ATCameraViewInterface, faceImage: UIImage, fullImage: UIImage, boundingBox: CGRect)
+    func cameraViewOutput(sender: ATCameraViewInterface, invalidFace: VNFaceObservation, invalidType: ATCameraView.FaceState)
 }
 
-open class ATCameraView: UIView {
+open class ATCameraView: UIView  {
     
-    enum FaceState {
-        case noFace
+    public enum FaceState {
         case validFace
+        case noFace
+        case faceTooLeaningLeft
+        case faceTooLeaningRight
+        case faceTooAlignUp
+        case faceTooAlignDown
+        case faceTooSmall
+        case faceTooBig
     }
     
     //MARK: UI Component
@@ -43,7 +51,6 @@ open class ATCameraView: UIView {
     internal lazy var avSession: AVCaptureSession? = nil
 
     internal var videoDataOutput: AVCaptureVideoDataOutput?
-    
     internal var previewLayer : AVCaptureVideoPreviewLayer!
     
     let deviceDiscoverySession: AVCaptureDevice.DiscoverySession = {
@@ -76,6 +83,7 @@ open class ATCameraView: UIView {
     
     ///Delegate
     weak var delegate: ATCameraViewDelegate? = nil
+    internal var startCaptureFace = false
     
     //MARK: Init
     override public init(frame: CGRect) { //for custom view
@@ -127,12 +135,10 @@ extension ATCameraView: ATCameraViewInterface {
         self.delegate = delegate
     }
     
-   
-    
-   
     public func startCamera() {
         
         setupCamera()
+        startCaptureFace = false
         
         DispatchQueue.global(qos: .userInteractive)
             .asyncAfter(deadline: .now() + 0.5) { [weak self] in
@@ -143,10 +149,19 @@ extension ATCameraView: ATCameraViewInterface {
                          
         }
         
+        DispatchQueue.global(qos: .userInteractive)
+            .asyncAfter(deadline: .now() + 2) {  [weak self] in
+                
+            self?.startCaptureFace = true
+                
+        }
+        
     }
     
     public func stopCamera() {
-        
+        if self.avSession != nil {
+            self.avSession?.stopRunning()
+        }
     }
     
 }
