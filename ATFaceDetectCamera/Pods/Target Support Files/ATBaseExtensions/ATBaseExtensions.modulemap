@@ -1,6 +1,0 @@
-framework module ATBaseExtensions {
-  umbrella header "ATBaseExtensions-umbrella.h"
-
-  export *
-  module * { export * }
-}

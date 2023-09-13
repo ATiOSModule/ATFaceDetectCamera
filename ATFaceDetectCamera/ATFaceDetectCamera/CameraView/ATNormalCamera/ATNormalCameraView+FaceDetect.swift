@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Vision
 
-extension ATCameraView: AVCaptureVideoDataOutputSampleBufferDelegate {
+extension ATNormalCameraView: AVCaptureVideoDataOutputSampleBufferDelegate {
     
     public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
@@ -24,7 +24,7 @@ extension ATCameraView: AVCaptureVideoDataOutputSampleBufferDelegate {
     
 }
 
-extension ATCameraView {
+extension ATNormalCameraView {
     
     fileprivate func detectFace(from sampleBuffer: CMSampleBuffer, pixelBuffer: CVPixelBuffer) {
         
@@ -115,14 +115,12 @@ extension ATCameraView {
                                         faceImage: faceImage,
                                         fullImage: flipFullImage,
                                         boundingBox: result.boundingBox)
-//        self.stopCamera()
-        
     }
     
 }
 
 //MARK: Handle Valid Face
-extension ATCameraView {
+extension ATNormalCameraView {
     
     ///Handle face rol-pitch-yall
     fileprivate func checkValidHeadPoseEstimation(result: VNFaceObservation) -> Bool {
@@ -143,7 +141,7 @@ extension ATCameraView {
         if abs(resultRollDegress) > 20 {
             
             if resultRollDegress > 0 {
-                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooLeaningRight)
+                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooLeaningLeft)
             } else {
                 self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooLeaningLeft)
             }

@@ -7,19 +7,24 @@
 
 import UIKit
 import ATFaceDetectCamera
-import ATBaseExtensions
 import Vision
 
 class ViewController: UIViewController {
 
-    let cameraView: ATCameraViewInterface = ATCameraView()
+    let cameraView: ATCameraViewInterface = ATFaceDetectCameraHandler.shared.createNormalCamera()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         cameraView.translatesAutoresizingMaskIntoConstraints = false
         cameraView.fixInView(self.view)
-        cameraView.setDelegate(self)
+        
+        do {
+            try cameraView.setDelegate(self)
+        } catch let err as NSError {
+            print(err)
+        }
+        
         
     }
     
@@ -39,13 +44,13 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: ATCameraViewDelegate {
+extension ViewController: ATNormalCameraDelegate {
     
     func cameraViewOutput(sender: ATCameraViewInterface, faceImage: UIImage, fullImage: UIImage, boundingBox: CGRect) {
         print("Success: \(boundingBox)")
     }
     
-    func cameraViewOutput(sender: ATCameraViewInterface, invalidFace: VNFaceObservation, invalidType: ATCameraView.FaceState) {
+    func cameraViewOutput(sender: ATCameraViewInterface, invalidFace: VNFaceObservation, invalidType: ATFaceState) {
         print("SuccessNot: \(invalidType)")
     }
     

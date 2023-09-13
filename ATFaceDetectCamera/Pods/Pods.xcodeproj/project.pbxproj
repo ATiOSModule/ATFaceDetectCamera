@@ -7,102 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F26B0F3A51412C38D123A0DCB3381DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		10A5FCF85588806C7055A098252CD560 /* ATBaseExtensions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 734E3FD937F2A0EA9328BA25CC26FCE4 /* ATBaseExtensions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11D04D1F9E3719A30EE69408AA6D54D7 /* Pods-ATFaceDetectCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F349BEA61AFAA1CA48D572BD3DF292B7 /* Pods-ATFaceDetectCamera-dummy.m */; };
-		16D08B23933622E3EC7447817361B30F /* Pods-ATFaceDetectCameraDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D88E42C60199DAD243A47CA358700C2 /* Pods-ATFaceDetectCameraDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1928B2D602AE36241415B8708AD4C6F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		2F73AA77EA4CFD8CBA49DA1A06ECB149 /* ATBaseExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E1767F546783BC0089B34A7D933917 /* ATBaseExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4674BB354E921B487A2A0EB496D67DD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		4F39CB4594B9AA41643B4B07853EF0E6 /* Pods-ATFaceDetectCameraDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4088F75157629E2C1D0A7051BAAA49 /* Pods-ATFaceDetectCameraDemo-dummy.m */; };
-		73644D00FC4A7D01CB812FCAA6EBF111 /* ATBaseExtensions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 719BCABB11E5A5A94F158BCD1D1EDE79 /* ATBaseExtensions-dummy.m */; };
-		99D84C62A53BF7EF882C1FD41516B529 /* UIView+ExLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2250F9EEE2A4C0B47A64533CA7E655 /* UIView+ExLayer.swift */; };
-		B6BFF8D40E754CDE0132A4DDE8D922D6 /* Pods-ATFaceDetectCamera-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8521D4168E355D103C30AC02B0FFF9 /* Pods-ATFaceDetectCamera-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB3C2FEC20A4CA01EB4B6E15981EC5D1 /* UIViewController+ExNavigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D33D69E159B1EEA17F3AEF30C963CC /* UIViewController+ExNavigate.swift */; };
-		F5F4D260EA03AC587C5ABA6A7C8D9A2F /* UIView+ExAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F48594B2A9957DC4FE3195A619C1C83 /* UIView+ExAutoLayout.swift */; };
+		056E446DA57EEBFC1EFFC48EBA2C0BB1 /* Pods-ATFaceDetectCamera-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE09FF50F4D1C5C08DE794886D793C62 /* Pods-ATFaceDetectCamera-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C6542F7A45D836A9EF564C55A16B737 /* Pods-ATFaceDetectCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78878E81DD5C466FE7918804DFD90B6A /* Pods-ATFaceDetectCamera-dummy.m */; };
+		91227AF8FDB820CF08F5D52B4554634E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B82423DE15A58476F82A369487FF43B1 /* Pods-ATFaceDetectCameraDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15719CA502C8C32A82B8CF66D9ECF32D /* Pods-ATFaceDetectCameraDemo-dummy.m */; };
+		D03BFC60FFDAF16CC155EECA945C16EB /* Pods-ATFaceDetectCameraDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D630F96DCF6B0F935BCD1FAD6F4C577 /* Pods-ATFaceDetectCameraDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F78211D3218E982BAE97D568A560FD33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		499FBE6B1F4F4D15DC6466C9156E0CD1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5FF5C90904016ADAA760F4567A8BE276;
-			remoteInfo = ATBaseExtensions;
-		};
-		59A7802A9B57B23052093F761172E5AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5FF5C90904016ADAA760F4567A8BE276;
-			remoteInfo = ATBaseExtensions;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		0A4088F75157629E2C1D0A7051BAAA49 /* Pods-ATFaceDetectCameraDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ATFaceDetectCameraDemo-dummy.m"; sourceTree = "<group>"; };
-		16AF4C5CC54779C4B4A095C43A7F36C1 /* Pods-ATFaceDetectCameraDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATFaceDetectCameraDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		18D33D69E159B1EEA17F3AEF30C963CC /* UIViewController+ExNavigate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+ExNavigate.swift"; path = "ATBaseExtensions/ATBaseExtensions/UIKit/UIViewController/UIViewController+ExNavigate.swift"; sourceTree = "<group>"; };
-		1C8521D4168E355D103C30AC02B0FFF9 /* Pods-ATFaceDetectCamera-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ATFaceDetectCamera-umbrella.h"; sourceTree = "<group>"; };
-		2C6AB9AA74A1404F4756206C2CE6AC71 /* Pods-ATFaceDetectCamera-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATFaceDetectCamera-acknowledgements.plist"; sourceTree = "<group>"; };
-		3D88E42C60199DAD243A47CA358700C2 /* Pods-ATFaceDetectCameraDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ATFaceDetectCameraDemo-umbrella.h"; sourceTree = "<group>"; };
-		3F48594B2A9957DC4FE3195A619C1C83 /* UIView+ExAutoLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+ExAutoLayout.swift"; path = "ATBaseExtensions/ATBaseExtensions/UIKit/UIView/UIView+ExAutoLayout.swift"; sourceTree = "<group>"; };
-		4350149C24A51B8C961832F55ED303C9 /* Pods-ATFaceDetectCamera.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ATFaceDetectCamera.modulemap"; sourceTree = "<group>"; };
-		43E1767F546783BC0089B34A7D933917 /* ATBaseExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ATBaseExtensions.h; path = ATBaseExtensions/ATBaseExtensions/ATBaseExtensions.h; sourceTree = "<group>"; };
-		5729DD3BABE6E7790F4C80541A9E03A9 /* Pods-ATFaceDetectCamera-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATFaceDetectCamera-Info.plist"; sourceTree = "<group>"; };
+		09D02CFF12ECF710CA78CF811ACDC3D5 /* Pods-ATFaceDetectCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATFaceDetectCamera.release.xcconfig"; sourceTree = "<group>"; };
+		13930623269A68401A6B53241EE7FEAB /* Pods-ATFaceDetectCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATFaceDetectCamera.debug.xcconfig"; sourceTree = "<group>"; };
+		15719CA502C8C32A82B8CF66D9ECF32D /* Pods-ATFaceDetectCameraDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ATFaceDetectCameraDemo-dummy.m"; sourceTree = "<group>"; };
+		2D630F96DCF6B0F935BCD1FAD6F4C577 /* Pods-ATFaceDetectCameraDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ATFaceDetectCameraDemo-umbrella.h"; sourceTree = "<group>"; };
+		3413F0073886E113806C570E86594646 /* Pods-ATFaceDetectCamera-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATFaceDetectCamera-Info.plist"; sourceTree = "<group>"; };
+		5189013D9818A247087410D9BFD566F7 /* Pods-ATFaceDetectCameraDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATFaceDetectCameraDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		6C0BB6A3F36DE10FEF7F9BC84F910B4A /* Pods-ATFaceDetectCameraDemo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ATFaceDetectCameraDemo"; path = Pods_ATFaceDetectCameraDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D2250F9EEE2A4C0B47A64533CA7E655 /* UIView+ExLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+ExLayer.swift"; path = "ATBaseExtensions/ATBaseExtensions/UIKit/UIView/UIView+ExLayer.swift"; sourceTree = "<group>"; };
-		6F7041ECF21BDD1AAA21102D0BACECBA /* Pods-ATFaceDetectCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATFaceDetectCamera.release.xcconfig"; sourceTree = "<group>"; };
-		719BCABB11E5A5A94F158BCD1D1EDE79 /* ATBaseExtensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ATBaseExtensions-dummy.m"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		734E3FD937F2A0EA9328BA25CC26FCE4 /* ATBaseExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ATBaseExtensions-umbrella.h"; sourceTree = "<group>"; };
+		78878E81DD5C466FE7918804DFD90B6A /* Pods-ATFaceDetectCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ATFaceDetectCamera-dummy.m"; sourceTree = "<group>"; };
+		7FF9B2BD240456BB98FBC45E53E4BA2C /* Pods-ATFaceDetectCameraDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATFaceDetectCameraDemo.release.xcconfig"; sourceTree = "<group>"; };
 		880DC1CFC1A846A173495A1DF6724A2E /* Pods-ATFaceDetectCamera */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ATFaceDetectCamera"; path = Pods_ATFaceDetectCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C32DBD68EFB2C255A40534D8D10AF94 /* Pods-ATFaceDetectCamera-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ATFaceDetectCamera-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9CD609F82B57ED8B997EA5C1060CE4D6 /* ATBaseExtensions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ATBaseExtensions.release.xcconfig; sourceTree = "<group>"; };
+		8B6D5A54EE1A8BC927C7F48A2BF37E7C /* Pods-ATFaceDetectCamera-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATFaceDetectCamera-acknowledgements.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A750622593F9A92A215F5CE2A097D910 /* ATBaseExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ATBaseExtensions.modulemap; sourceTree = "<group>"; };
-		AACAC50811B2DB7612F1FFA541854261 /* Pods-ATFaceDetectCameraDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ATFaceDetectCameraDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B1BBC2A3B929BBD0B8AA91499E40DD94 /* Pods-ATFaceDetectCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATFaceDetectCamera.debug.xcconfig"; sourceTree = "<group>"; };
-		B4032FF0153274557C09218F4C7EE152 /* Pods-ATFaceDetectCameraDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATFaceDetectCameraDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		B4DFB4830530C80746D56CACB5087A98 /* Pods-ATFaceDetectCameraDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATFaceDetectCameraDemo-Info.plist"; sourceTree = "<group>"; };
-		B8E5F5395448D22BF7291700EEE39121 /* ATBaseExtensions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ATBaseExtensions.debug.xcconfig; sourceTree = "<group>"; };
-		BB68F769F454BE65DE982666E6A0687E /* ATBaseExtensions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ATBaseExtensions-Info.plist"; sourceTree = "<group>"; };
-		CCAF7E2F2434B2FE2908EDB52AC1E2DD /* ATBaseExtensions */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ATBaseExtensions; path = ATBaseExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D34C2968EB9D81209FA7A533D56CC352 /* Pods-ATFaceDetectCameraDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATFaceDetectCameraDemo.release.xcconfig"; sourceTree = "<group>"; };
-		F349BEA61AFAA1CA48D572BD3DF292B7 /* Pods-ATFaceDetectCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ATFaceDetectCamera-dummy.m"; sourceTree = "<group>"; };
-		F87385635FC633F370A69326E2346CE3 /* Pods-ATFaceDetectCameraDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ATFaceDetectCameraDemo-frameworks.sh"; sourceTree = "<group>"; };
-		F932893E33F44F3434C756E4F5E94C1A /* Pods-ATFaceDetectCameraDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ATFaceDetectCameraDemo.modulemap"; sourceTree = "<group>"; };
-		FFFEA08ADA78EA20D92423192DEFEC56 /* ATBaseExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ATBaseExtensions-prefix.pch"; sourceTree = "<group>"; };
+		9FA037EFCC97717290A5126673D881CB /* Pods-ATFaceDetectCameraDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ATFaceDetectCameraDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A28F339AF6F46515471BFC99B2A7A838 /* Pods-ATFaceDetectCameraDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ATFaceDetectCameraDemo.modulemap"; sourceTree = "<group>"; };
+		BBCFA197C75FC055D12A1C8944D80A68 /* Pods-ATFaceDetectCameraDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ATFaceDetectCameraDemo-Info.plist"; sourceTree = "<group>"; };
+		C6B13268F02DC603291EB1819ADD0A6F /* Pods-ATFaceDetectCamera-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ATFaceDetectCamera-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CE09FF50F4D1C5C08DE794886D793C62 /* Pods-ATFaceDetectCamera-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ATFaceDetectCamera-umbrella.h"; sourceTree = "<group>"; };
+		DBD340742E0D87F59D99F99202D947FA /* Pods-ATFaceDetectCameraDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ATFaceDetectCameraDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E133B78730775BE8F0DF2395E603FE42 /* Pods-ATFaceDetectCamera.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ATFaceDetectCamera.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4CD996FB6020C37E62830F9B547A9066 /* Frameworks */ = {
+		42F39C457E34694927C5C55CD4025DE3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1928B2D602AE36241415B8708AD4C6F0 /* Foundation.framework in Frameworks */,
+				F78211D3218E982BAE97D568A560FD33 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		62BF9ADD36958F61D5A365D6D7F6A686 /* Frameworks */ = {
+		9CCDD276019F4C1A7FB65DCD04F276CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4674BB354E921B487A2A0EB496D67DD7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A70DD3C60B40A4A6CC1A29F0027DE131 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F26B0F3A51412C38D123A0DCB3381DA /* Foundation.framework in Frameworks */,
+				91227AF8FDB820CF08F5D52B4554634E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F3AC8B4CFAE9F1A167C60E55B7645E1 /* Pods-ATFaceDetectCamera */ = {
+			isa = PBXGroup;
+			children = (
+				E133B78730775BE8F0DF2395E603FE42 /* Pods-ATFaceDetectCamera.modulemap */,
+				C6B13268F02DC603291EB1819ADD0A6F /* Pods-ATFaceDetectCamera-acknowledgements.markdown */,
+				8B6D5A54EE1A8BC927C7F48A2BF37E7C /* Pods-ATFaceDetectCamera-acknowledgements.plist */,
+				78878E81DD5C466FE7918804DFD90B6A /* Pods-ATFaceDetectCamera-dummy.m */,
+				3413F0073886E113806C570E86594646 /* Pods-ATFaceDetectCamera-Info.plist */,
+				CE09FF50F4D1C5C08DE794886D793C62 /* Pods-ATFaceDetectCamera-umbrella.h */,
+				13930623269A68401A6B53241EE7FEAB /* Pods-ATFaceDetectCamera.debug.xcconfig */,
+				09D02CFF12ECF710CA78CF811ACDC3D5 /* Pods-ATFaceDetectCamera.release.xcconfig */,
+			);
+			name = "Pods-ATFaceDetectCamera";
+			path = "Target Support Files/Pods-ATFaceDetectCamera";
+			sourceTree = "<group>";
+		};
+		54DFA76BB0768EC0CFE56EE7CB102EF1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F3AC8B4CFAE9F1A167C60E55B7645E1 /* Pods-ATFaceDetectCamera */,
+				5F6F40AF1C1172C770CA860280B20050 /* Pods-ATFaceDetectCameraDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,92 +91,29 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6839A62347CDC31860502B883EE27DA0 /* Targets Support Files */ = {
+		5F6F40AF1C1172C770CA860280B20050 /* Pods-ATFaceDetectCameraDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9895405AC7B275178978254B3320830C /* Pods-ATFaceDetectCamera */,
-				9FE4F9CC23428DA1EB5818BAD0C2B57C /* Pods-ATFaceDetectCameraDemo */,
+				A28F339AF6F46515471BFC99B2A7A838 /* Pods-ATFaceDetectCameraDemo.modulemap */,
+				DBD340742E0D87F59D99F99202D947FA /* Pods-ATFaceDetectCameraDemo-acknowledgements.markdown */,
+				5189013D9818A247087410D9BFD566F7 /* Pods-ATFaceDetectCameraDemo-acknowledgements.plist */,
+				15719CA502C8C32A82B8CF66D9ECF32D /* Pods-ATFaceDetectCameraDemo-dummy.m */,
+				BBCFA197C75FC055D12A1C8944D80A68 /* Pods-ATFaceDetectCameraDemo-Info.plist */,
+				2D630F96DCF6B0F935BCD1FAD6F4C577 /* Pods-ATFaceDetectCameraDemo-umbrella.h */,
+				9FA037EFCC97717290A5126673D881CB /* Pods-ATFaceDetectCameraDemo.debug.xcconfig */,
+				7FF9B2BD240456BB98FBC45E53E4BA2C /* Pods-ATFaceDetectCameraDemo.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-ATFaceDetectCameraDemo";
+			path = "Target Support Files/Pods-ATFaceDetectCameraDemo";
 			sourceTree = "<group>";
 		};
-		6BB1C6330B7F281CA57A2D8704A88707 /* Products */ = {
+		B767211E12CEF5DC8B582228921C617B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCAF7E2F2434B2FE2908EDB52AC1E2DD /* ATBaseExtensions */,
 				880DC1CFC1A846A173495A1DF6724A2E /* Pods-ATFaceDetectCamera */,
 				6C0BB6A3F36DE10FEF7F9BC84F910B4A /* Pods-ATFaceDetectCameraDemo */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		81EBE71D95DA19EB4D84C2F889EBA08B /* ATBaseExtensions */ = {
-			isa = PBXGroup;
-			children = (
-				43E1767F546783BC0089B34A7D933917 /* ATBaseExtensions.h */,
-				3F48594B2A9957DC4FE3195A619C1C83 /* UIView+ExAutoLayout.swift */,
-				6D2250F9EEE2A4C0B47A64533CA7E655 /* UIView+ExLayer.swift */,
-				18D33D69E159B1EEA17F3AEF30C963CC /* UIViewController+ExNavigate.swift */,
-				8421E85367D274B010DA2F0CD702595B /* Support Files */,
-			);
-			name = ATBaseExtensions;
-			path = ATBaseExtensions;
-			sourceTree = "<group>";
-		};
-		8421E85367D274B010DA2F0CD702595B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A750622593F9A92A215F5CE2A097D910 /* ATBaseExtensions.modulemap */,
-				719BCABB11E5A5A94F158BCD1D1EDE79 /* ATBaseExtensions-dummy.m */,
-				BB68F769F454BE65DE982666E6A0687E /* ATBaseExtensions-Info.plist */,
-				FFFEA08ADA78EA20D92423192DEFEC56 /* ATBaseExtensions-prefix.pch */,
-				734E3FD937F2A0EA9328BA25CC26FCE4 /* ATBaseExtensions-umbrella.h */,
-				B8E5F5395448D22BF7291700EEE39121 /* ATBaseExtensions.debug.xcconfig */,
-				9CD609F82B57ED8B997EA5C1060CE4D6 /* ATBaseExtensions.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ATBaseExtensions";
-			sourceTree = "<group>";
-		};
-		8CA6E57BCDA8D08A13AFF201A0939FDA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				81EBE71D95DA19EB4D84C2F889EBA08B /* ATBaseExtensions */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		9895405AC7B275178978254B3320830C /* Pods-ATFaceDetectCamera */ = {
-			isa = PBXGroup;
-			children = (
-				4350149C24A51B8C961832F55ED303C9 /* Pods-ATFaceDetectCamera.modulemap */,
-				8C32DBD68EFB2C255A40534D8D10AF94 /* Pods-ATFaceDetectCamera-acknowledgements.markdown */,
-				2C6AB9AA74A1404F4756206C2CE6AC71 /* Pods-ATFaceDetectCamera-acknowledgements.plist */,
-				F349BEA61AFAA1CA48D572BD3DF292B7 /* Pods-ATFaceDetectCamera-dummy.m */,
-				5729DD3BABE6E7790F4C80541A9E03A9 /* Pods-ATFaceDetectCamera-Info.plist */,
-				1C8521D4168E355D103C30AC02B0FFF9 /* Pods-ATFaceDetectCamera-umbrella.h */,
-				B1BBC2A3B929BBD0B8AA91499E40DD94 /* Pods-ATFaceDetectCamera.debug.xcconfig */,
-				6F7041ECF21BDD1AAA21102D0BACECBA /* Pods-ATFaceDetectCamera.release.xcconfig */,
-			);
-			name = "Pods-ATFaceDetectCamera";
-			path = "Target Support Files/Pods-ATFaceDetectCamera";
-			sourceTree = "<group>";
-		};
-		9FE4F9CC23428DA1EB5818BAD0C2B57C /* Pods-ATFaceDetectCameraDemo */ = {
-			isa = PBXGroup;
-			children = (
-				F932893E33F44F3434C756E4F5E94C1A /* Pods-ATFaceDetectCameraDemo.modulemap */,
-				AACAC50811B2DB7612F1FFA541854261 /* Pods-ATFaceDetectCameraDemo-acknowledgements.markdown */,
-				16AF4C5CC54779C4B4A095C43A7F36C1 /* Pods-ATFaceDetectCameraDemo-acknowledgements.plist */,
-				0A4088F75157629E2C1D0A7051BAAA49 /* Pods-ATFaceDetectCameraDemo-dummy.m */,
-				F87385635FC633F370A69326E2346CE3 /* Pods-ATFaceDetectCameraDemo-frameworks.sh */,
-				B4DFB4830530C80746D56CACB5087A98 /* Pods-ATFaceDetectCameraDemo-Info.plist */,
-				3D88E42C60199DAD243A47CA358700C2 /* Pods-ATFaceDetectCameraDemo-umbrella.h */,
-				B4032FF0153274557C09218F4C7EE152 /* Pods-ATFaceDetectCameraDemo.debug.xcconfig */,
-				D34C2968EB9D81209FA7A533D56CC352 /* Pods-ATFaceDetectCameraDemo.release.xcconfig */,
-			);
-			name = "Pods-ATFaceDetectCameraDemo";
-			path = "Target Support Files/Pods-ATFaceDetectCameraDemo";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -204,9 +121,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				8CA6E57BCDA8D08A13AFF201A0939FDA /* Pods */,
-				6BB1C6330B7F281CA57A2D8704A88707 /* Products */,
-				6839A62347CDC31860502B883EE27DA0 /* Targets Support Files */,
+				B767211E12CEF5DC8B582228921C617B /* Products */,
+				54DFA76BB0768EC0CFE56EE7CB102EF1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,65 +137,37 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0BA6BB16B43D69AB32C8BF03A3C08874 /* Headers */ = {
+		34BA74801299A10CB0ADBFFD6DC69C4C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16D08B23933622E3EC7447817361B30F /* Pods-ATFaceDetectCameraDemo-umbrella.h in Headers */,
+				056E446DA57EEBFC1EFFC48EBA2C0BB1 /* Pods-ATFaceDetectCamera-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9833791A21FA65AEF9F6F085396B2C5D /* Headers */ = {
+		EC9F8BA6AABB9EFE44192538C8F9C122 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F73AA77EA4CFD8CBA49DA1A06ECB149 /* ATBaseExtensions.h in Headers */,
-				10A5FCF85588806C7055A098252CD560 /* ATBaseExtensions-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A6615898CD935731152808202BCFFA59 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B6BFF8D40E754CDE0132A4DDE8D922D6 /* Pods-ATFaceDetectCamera-umbrella.h in Headers */,
+				D03BFC60FFDAF16CC155EECA945C16EB /* Pods-ATFaceDetectCameraDemo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5FF5C90904016ADAA760F4567A8BE276 /* ATBaseExtensions */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7FFB2B548768B9E8B55CED7415B987D0 /* Build configuration list for PBXNativeTarget "ATBaseExtensions" */;
-			buildPhases = (
-				9833791A21FA65AEF9F6F085396B2C5D /* Headers */,
-				F5D3A7FCEF11699BF7492392B04FAD22 /* Sources */,
-				A70DD3C60B40A4A6CC1A29F0027DE131 /* Frameworks */,
-				A27271A1DC9BFA8F1B6EA99A1B59DCA1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ATBaseExtensions;
-			productName = ATBaseExtensions;
-			productReference = CCAF7E2F2434B2FE2908EDB52AC1E2DD /* ATBaseExtensions */;
-			productType = "com.apple.product-type.framework";
-		};
 		7AC7C5F48E90E5723F7E975ABD0D76C5 /* Pods-ATFaceDetectCamera */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 315F0C87E4A03EC4121F5D13D9F26BD0 /* Build configuration list for PBXNativeTarget "Pods-ATFaceDetectCamera" */;
+			buildConfigurationList = D044B35CABCE364E82D953693EF6B56E /* Build configuration list for PBXNativeTarget "Pods-ATFaceDetectCamera" */;
 			buildPhases = (
-				A6615898CD935731152808202BCFFA59 /* Headers */,
-				5BBB54D633C90967BE09722B59302125 /* Sources */,
-				62BF9ADD36958F61D5A365D6D7F6A686 /* Frameworks */,
-				11CA0A324C0ACFE6E3C08C10E914BBBE /* Resources */,
+				34BA74801299A10CB0ADBFFD6DC69C4C /* Headers */,
+				40404CDF82306FEF695F5AD45A5DB69D /* Sources */,
+				9CCDD276019F4C1A7FB65DCD04F276CC /* Frameworks */,
+				7A65824E96968AF0A251E21D27051A31 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5430A0B8E6A02B0FE7FE76F632F71E7C /* PBXTargetDependency */,
 			);
 			name = "Pods-ATFaceDetectCamera";
 			productName = Pods_ATFaceDetectCamera;
@@ -288,17 +176,16 @@
 		};
 		9283A5EE86DC3CAFE8F047013632CB96 /* Pods-ATFaceDetectCameraDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C65E3E026B02702555D2614925C5107 /* Build configuration list for PBXNativeTarget "Pods-ATFaceDetectCameraDemo" */;
+			buildConfigurationList = 9381764B5329F1D839865D9D4CF8B08E /* Build configuration list for PBXNativeTarget "Pods-ATFaceDetectCameraDemo" */;
 			buildPhases = (
-				0BA6BB16B43D69AB32C8BF03A3C08874 /* Headers */,
-				512BD88CD98A78966935A3442D09A9D2 /* Sources */,
-				4CD996FB6020C37E62830F9B547A9066 /* Frameworks */,
-				4C3B84FDEBD79B22965964C85B7E1202 /* Resources */,
+				EC9F8BA6AABB9EFE44192538C8F9C122 /* Headers */,
+				3F0C81381FA72712850E1C76EECD3060 /* Sources */,
+				42F39C457E34694927C5C55CD4025DE3 /* Frameworks */,
+				B1BC7EDACE80A5AD7A2CF0BB52EA71A4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				02D0D8FCC5655D08CF7F423BD382F7CC /* PBXTargetDependency */,
 			);
 			name = "Pods-ATFaceDetectCameraDemo";
 			productName = Pods_ATFaceDetectCameraDemo;
@@ -323,11 +210,10 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 6BB1C6330B7F281CA57A2D8704A88707 /* Products */;
+			productRefGroup = B767211E12CEF5DC8B582228921C617B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5FF5C90904016ADAA760F4567A8BE276 /* ATBaseExtensions */,
 				7AC7C5F48E90E5723F7E975ABD0D76C5 /* Pods-ATFaceDetectCamera */,
 				9283A5EE86DC3CAFE8F047013632CB96 /* Pods-ATFaceDetectCameraDemo */,
 			);
@@ -335,21 +221,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		11CA0A324C0ACFE6E3C08C10E914BBBE /* Resources */ = {
+		7A65824E96968AF0A251E21D27051A31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C3B84FDEBD79B22965964C85B7E1202 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A27271A1DC9BFA8F1B6EA99A1B59DCA1 /* Resources */ = {
+		B1BC7EDACE80A5AD7A2CF0BB52EA71A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,54 +238,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		512BD88CD98A78966935A3442D09A9D2 /* Sources */ = {
+		3F0C81381FA72712850E1C76EECD3060 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F39CB4594B9AA41643B4B07853EF0E6 /* Pods-ATFaceDetectCameraDemo-dummy.m in Sources */,
+				B82423DE15A58476F82A369487FF43B1 /* Pods-ATFaceDetectCameraDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5BBB54D633C90967BE09722B59302125 /* Sources */ = {
+		40404CDF82306FEF695F5AD45A5DB69D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11D04D1F9E3719A30EE69408AA6D54D7 /* Pods-ATFaceDetectCamera-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5D3A7FCEF11699BF7492392B04FAD22 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				73644D00FC4A7D01CB812FCAA6EBF111 /* ATBaseExtensions-dummy.m in Sources */,
-				F5F4D260EA03AC587C5ABA6A7C8D9A2F /* UIView+ExAutoLayout.swift in Sources */,
-				99D84C62A53BF7EF882C1FD41516B529 /* UIView+ExLayer.swift in Sources */,
-				EB3C2FEC20A4CA01EB4B6E15981EC5D1 /* UIViewController+ExNavigate.swift in Sources */,
+				3C6542F7A45D836A9EF564C55A16B737 /* Pods-ATFaceDetectCamera-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		02D0D8FCC5655D08CF7F423BD382F7CC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ATBaseExtensions;
-			target = 5FF5C90904016ADAA760F4567A8BE276 /* ATBaseExtensions */;
-			targetProxy = 499FBE6B1F4F4D15DC6466C9156E0CD1 /* PBXContainerItemProxy */;
-		};
-		5430A0B8E6A02B0FE7FE76F632F71E7C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ATBaseExtensions;
-			target = 5FF5C90904016ADAA760F4567A8BE276 /* ATBaseExtensions */;
-			targetProxy = 59A7802A9B57B23052093F761172E5AC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		47DE964A3F017D59A931FFC2BE96CC1D /* Release */ = {
+		07B39C3D03B2BDC5EBC6353E602BAA3F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D34C2968EB9D81209FA7A533D56CC352 /* Pods-ATFaceDetectCameraDemo.release.xcconfig */;
+			baseConfigurationReference = 13930623269A68401A6B53241EE7FEAB /* Pods-ATFaceDetectCamera.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -418,54 +271,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ATFaceDetectCameraDemo/Pods-ATFaceDetectCameraDemo-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-ATFaceDetectCamera/Pods-ATFaceDetectCamera-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ATFaceDetectCameraDemo/Pods-ATFaceDetectCameraDemo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		69BD3A5A90D4C9C4095D92E9D0C9C077 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4032FF0153274557C09218F4C7EE152 /* Pods-ATFaceDetectCameraDemo.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ATFaceDetectCameraDemo/Pods-ATFaceDetectCameraDemo-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ATFaceDetectCameraDemo/Pods-ATFaceDetectCameraDemo.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-ATFaceDetectCamera/Pods-ATFaceDetectCamera.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -479,7 +294,7 @@
 			};
 			name = Debug;
 		};
-		7C3FBC45C4966EFE20583918767EFBE2 /* Debug */ = {
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -532,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -545,153 +360,7 @@
 			};
 			name = Debug;
 		};
-		AF375E9C891E9953273E9ED8DA7B3D3D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8E5F5395448D22BF7291700EEE39121 /* ATBaseExtensions.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ATBaseExtensions/ATBaseExtensions-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ATBaseExtensions/ATBaseExtensions-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ATBaseExtensions/ATBaseExtensions.modulemap";
-				PRODUCT_MODULE_NAME = ATBaseExtensions;
-				PRODUCT_NAME = ATBaseExtensions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BB569B256F290220F69579C341B1A51E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1BBC2A3B929BBD0B8AA91499E40DD94 /* Pods-ATFaceDetectCamera.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ATFaceDetectCamera/Pods-ATFaceDetectCamera-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ATFaceDetectCamera/Pods-ATFaceDetectCamera.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D2B3E4FFB4B2530280A4C9B12585EC11 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CD609F82B57ED8B997EA5C1060CE4D6 /* ATBaseExtensions.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ATBaseExtensions/ATBaseExtensions-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ATBaseExtensions/ATBaseExtensions-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ATBaseExtensions/ATBaseExtensions.modulemap";
-				PRODUCT_MODULE_NAME = ATBaseExtensions;
-				PRODUCT_NAME = ATBaseExtensions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F5298B927A10816F0AF5E57A338D1D3A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F7041ECF21BDD1AAA21102D0BACECBA /* Pods-ATFaceDetectCamera.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ATFaceDetectCamera/Pods-ATFaceDetectCamera-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ATFaceDetectCamera/Pods-ATFaceDetectCamera.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FF0A36149038A192FFD678E1D4A40D3B /* Release */ = {
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -741,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -753,41 +422,145 @@
 			};
 			name = Release;
 		};
+		9E98708BD39D9E6DA7E526543C023F72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09D02CFF12ECF710CA78CF811ACDC3D5 /* Pods-ATFaceDetectCamera.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ATFaceDetectCamera/Pods-ATFaceDetectCamera-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ATFaceDetectCamera/Pods-ATFaceDetectCamera.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BE5BCDE714F91719C01EA9E6337CF67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FF9B2BD240456BB98FBC45E53E4BA2C /* Pods-ATFaceDetectCameraDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ATFaceDetectCameraDemo/Pods-ATFaceDetectCameraDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ATFaceDetectCameraDemo/Pods-ATFaceDetectCameraDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F790D1248EE1B9CC28FD4705DB6A99DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FA037EFCC97717290A5126673D881CB /* Pods-ATFaceDetectCameraDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ATFaceDetectCameraDemo/Pods-ATFaceDetectCameraDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ATFaceDetectCameraDemo/Pods-ATFaceDetectCameraDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		315F0C87E4A03EC4121F5D13D9F26BD0 /* Build configuration list for PBXNativeTarget "Pods-ATFaceDetectCamera" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB569B256F290220F69579C341B1A51E /* Debug */,
-				F5298B927A10816F0AF5E57A338D1D3A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7C3FBC45C4966EFE20583918767EFBE2 /* Debug */,
-				FF0A36149038A192FFD678E1D4A40D3B /* Release */,
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7FFB2B548768B9E8B55CED7415B987D0 /* Build configuration list for PBXNativeTarget "ATBaseExtensions" */ = {
+		9381764B5329F1D839865D9D4CF8B08E /* Build configuration list for PBXNativeTarget "Pods-ATFaceDetectCameraDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF375E9C891E9953273E9ED8DA7B3D3D /* Debug */,
-				D2B3E4FFB4B2530280A4C9B12585EC11 /* Release */,
+				F790D1248EE1B9CC28FD4705DB6A99DB /* Debug */,
+				BE5BCDE714F91719C01EA9E6337CF67E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C65E3E026B02702555D2614925C5107 /* Build configuration list for PBXNativeTarget "Pods-ATFaceDetectCameraDemo" */ = {
+		D044B35CABCE364E82D953693EF6B56E /* Build configuration list for PBXNativeTarget "Pods-ATFaceDetectCamera" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				69BD3A5A90D4C9C4095D92E9D0C9C077 /* Debug */,
-				47DE964A3F017D59A931FFC2BE96CC1D /* Release */,
+				07B39C3D03B2BDC5EBC6353E602BAA3F /* Debug */,
+				9E98708BD39D9E6DA7E526543C023F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

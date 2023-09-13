@@ -9,7 +9,7 @@ import Foundation
 import AVFoundation
 import UIKit
 
-extension ATCameraView {
+extension ATNormalCameraView {
     
     internal func setupPreviewLayer() {
         

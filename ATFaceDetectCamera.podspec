@@ -18,12 +18,12 @@ Pod::Spec.new do |s|
   s.platform          = :ios
 
   # Resource
-  s.source            = { :git => "https://github.com/ATiOSModule/ATFaceDetectCamera.git", :tag => '0.0.3'}
+  s.source            = { :git => "https://github.com/ATiOSModule/ATFaceDetectCamera.git", :tag => s.version.to_s }
+  
   s.source_files  = "ATFaceDetectCamera", "ATFaceDetectCamera/ATFaceDetectCamera/**/*.{h,m,mm,swift}"
   s.exclude_files = "ATFaceDetectCamera/Exclude/**"
 
   # Dependencies
-  s.dependency 'ATBaseExtensions', '~> 0.0.2'
 
   # Deployment
   s.ios.deployment_target = '13.0'

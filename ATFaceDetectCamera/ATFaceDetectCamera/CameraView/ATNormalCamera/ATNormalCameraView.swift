@@ -8,42 +8,9 @@
 import Foundation
 import UIKit
 import AVFoundation
-import ATBaseExtensions
 import Vision
 
-extension UIView {
-    convenience init(autoLayout: Bool) {
-        self.init()
-        if autoLayout {
-            self.translatesAutoresizingMaskIntoConstraints = false
-        }
-    }
-}
-
-public protocol ATCameraViewInterface: UIView {
-    func setDelegate(_ delegate: ATCameraViewDelegate)
-    func startCamera()
-    func stopCamera()
-}
-
-public protocol ATCameraViewDelegate: NSObject {
-    func cameraViewOutput(sender: ATCameraViewInterface, faceImage: UIImage, fullImage: UIImage, boundingBox: CGRect)
-    func cameraViewOutput(sender: ATCameraViewInterface, invalidFace: VNFaceObservation, invalidType: ATCameraView.FaceState)
-}
-
-open class ATCameraView: UIView  {
-    
-    public enum FaceState {
-        case validFace
-        case noFace
-        case faceTooLeaningLeft
-        case faceTooLeaningRight
-        case faceTooAlignUp
-        case faceTooAlignDown
-        case faceTooSmall
-        case faceTooBig
-        case faceIsNotCenter
-    }
+internal class ATNormalCameraView: UIView  {
     
     //MARK: UI Component
     
@@ -57,14 +24,9 @@ open class ATCameraView: UIView  {
     let deviceDiscoverySession: AVCaptureDevice.DiscoverySession = {
         
         var camDevice: AVCaptureDevice.DiscoverySession
-        let depthCamera = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInTrueDepthCamera], mediaType: .video, position: .front)
         let dualCamera = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: .video, position: .front)
         
-        if depthCamera.devices.first != nil {
-            
-            return depthCamera
-            
-        } else if dualCamera.devices.first != nil {
+        if dualCamera.devices.first != nil {
             
             return dualCamera
             
@@ -83,39 +45,27 @@ open class ATCameraView: UIView  {
                                                   autoreleaseFrequency: .workItem)
     
     ///Delegate
-    weak var delegate: ATCameraViewDelegate? = nil
+    fileprivate (set) weak var delegate: ATNormalCameraDelegate? = nil
     internal var startCaptureFace = false
     
-    //MARK: Init
-    override public init(frame: CGRect) { //for custom view
-        super.init(frame: frame)
-        commonInit()
-    }
+}
+
+extension ATNormalCameraView {
     
-    required public init?(coder aCoder: NSCoder) { //For xib
-        super.init(coder: aCoder)
-        commonInit()
-    }
-    
-    //MARK: Setup Func
-    private func commonInit() {
-        setupLayout()
-        setupUI()
+    func setDelegate(_ delegate: ATCameraDelegate) throws {
+        
+        guard let delegate = delegate as? ATNormalCameraDelegate else {
+            throw DelegateError.notConformToATNormalCameraDelegate
+        }
+        
+        self.delegate = delegate
     }
     
 }
 
-extension ATCameraView {
-    
-    fileprivate func setupLayout() {
-       
-    }
-    
-    fileprivate func setupUI() {
-       
-    }
-    
-    private func setupCamera() {
+extension ATNormalCameraView: ATCameraViewInterface {
+   
+    public func setupCamera() {
         
         self.avSession = nil
         self.videoDataOutput = nil
@@ -127,15 +77,7 @@ extension ATCameraView {
         self.setupPreviewLayer()
         
     }
-    
-}
-
-extension ATCameraView: ATCameraViewInterface {
-    
-    public func setDelegate(_ delegate: ATCameraViewDelegate) {
-        self.delegate = delegate
-    }
-    
+   
     public func startCamera() {
         
         setupCamera()
@@ -165,20 +107,3 @@ extension ATCameraView: ATCameraViewInterface {
     }
     
 }
-
-
-//
-////MARK: UIPreviewer
-//private struct SwiftUIATCameraView: UIViewRepresentable {
-//    func makeUIView(context: Context) -> ATCameraView {
-//        return ATCameraView()
-//
-//    }
-//    func updateUIView(_ view: ATCameraView, context: Context) {}
-//}
-//
-//private struct ATCameraView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SwiftUIATCameraView()
-//    }
-//}

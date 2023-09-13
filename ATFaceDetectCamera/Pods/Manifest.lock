@@ -1,22 +1,3 @@
-PODS:
-  - ATBaseExtensions (0.0.2)
-
-DEPENDENCIES:
-  - ATBaseExtensions (from `https://github.com/ATiOSModule/ATBaseExtensions.git`, tag `0.0.2`)
-
-EXTERNAL SOURCES:
-  ATBaseExtensions:
-    :git: https://github.com/ATiOSModule/ATBaseExtensions.git
-    :tag: 0.0.2
-
-CHECKOUT OPTIONS:
-  ATBaseExtensions:
-    :git: https://github.com/ATiOSModule/ATBaseExtensions.git
-    :tag: 0.0.2
-
-SPEC CHECKSUMS:
-  ATBaseExtensions: 9a45ef336566e8028b2fe13c2da9f3db33b18dc5
-
-PODFILE CHECKSUM: 1c18d53e7ae05db02ae398c1d85a92460c8e0f5e
+PODFILE CHECKSUM: 11ffd822b7e01e49ac543eebaeea670b8cdf0096
 
 COCOAPODS: 1.12.1
