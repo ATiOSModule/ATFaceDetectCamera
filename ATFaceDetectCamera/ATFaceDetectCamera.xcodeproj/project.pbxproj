@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6811C6052AB36CEC00F5C4FE /* ATTrueDepthCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6811C6042AB36CEC00F5C4FE /* ATTrueDepthCameraView.swift */; };
+		6811C6072AB36E0100F5C4FE /* ATTrueDepthCameraDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6811C6062AB36E0100F5C4FE /* ATTrueDepthCameraDelegate.swift */; };
+		6811C6092AB36EA000F5C4FE /* ATTrueDepthCameraView+CameraSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6811C6082AB36EA000F5C4FE /* ATTrueDepthCameraView+CameraSetup.swift */; };
+		6811C60B2AB371B100F5C4FE /* ATTrueDepthCameraView+FaceDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6811C60A2AB371B100F5C4FE /* ATTrueDepthCameraView+FaceDetect.swift */; };
 		682FB3092AB1DD31004707E8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682FB3082AB1DD31004707E8 /* UIView+Extensions.swift */; };
 		68CD126A2AB219070045B099 /* ATFaceDetectCameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD12692AB219070045B099 /* ATFaceDetectCameraHandler.swift */; };
 		68CD126C2AB219180045B099 /* ATCameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD126B2AB219180045B099 /* ATCameraType.swift */; };
@@ -61,6 +65,10 @@
 /* Begin PBXFileReference section */
 		151936A6F588BD6D4205B91D /* Pods_ATFaceDetectCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATFaceDetectCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		414570250F3658634AB3ABE7 /* Pods-ATFaceDetectCameraDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATFaceDetectCameraDemo.release.xcconfig"; path = "Target Support Files/Pods-ATFaceDetectCameraDemo/Pods-ATFaceDetectCameraDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6811C6042AB36CEC00F5C4FE /* ATTrueDepthCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTrueDepthCameraView.swift; sourceTree = "<group>"; };
+		6811C6062AB36E0100F5C4FE /* ATTrueDepthCameraDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTrueDepthCameraDelegate.swift; sourceTree = "<group>"; };
+		6811C6082AB36EA000F5C4FE /* ATTrueDepthCameraView+CameraSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ATTrueDepthCameraView+CameraSetup.swift"; sourceTree = "<group>"; };
+		6811C60A2AB371B100F5C4FE /* ATTrueDepthCameraView+FaceDetect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ATTrueDepthCameraView+FaceDetect.swift"; sourceTree = "<group>"; };
 		682FB3082AB1DD31004707E8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		68CD12692AB219070045B099 /* ATFaceDetectCameraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATFaceDetectCameraHandler.swift; sourceTree = "<group>"; };
 		68CD126B2AB219180045B099 /* ATCameraType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCameraType.swift; sourceTree = "<group>"; };
@@ -112,6 +120,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6811C6032AB36CC800F5C4FE /* ATTrueDepthCamera */ = {
+			isa = PBXGroup;
+			children = (
+				6811C6062AB36E0100F5C4FE /* ATTrueDepthCameraDelegate.swift */,
+				6811C6042AB36CEC00F5C4FE /* ATTrueDepthCameraView.swift */,
+				6811C6082AB36EA000F5C4FE /* ATTrueDepthCameraView+CameraSetup.swift */,
+				6811C60A2AB371B100F5C4FE /* ATTrueDepthCameraView+FaceDetect.swift */,
+			);
+			path = ATTrueDepthCamera;
+			sourceTree = "<group>";
+		};
 		682FB30A2AB1DED9004707E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +250,7 @@
 				68CD12792AB227730045B099 /* ATCameraDelegate.swift */,
 				68CD126D2AB21A050045B099 /* ATCameraViewInterface.swift */,
 				68CD12722AB21B8D0045B099 /* ATFaceState.swift */,
+				6811C6032AB36CC800F5C4FE /* ATTrueDepthCamera */,
 				68CD126F2AB21A190045B099 /* ATNormalCamera */,
 			);
 			path = CameraView;
@@ -404,11 +424,15 @@
 				860015292A8F58010067A008 /* ATNormalCameraView+CameraSetup.swift in Sources */,
 				86AD520C2A83F4A00024B173 /* ATNormalCameraView.swift in Sources */,
 				68CD126C2AB219180045B099 /* ATCameraType.swift in Sources */,
+				6811C6092AB36EA000F5C4FE /* ATTrueDepthCameraView+CameraSetup.swift in Sources */,
 				68CD127A2AB227730045B099 /* ATCameraDelegate.swift in Sources */,
 				86AD51E42A83F36C0024B173 /* ATFaceDetectCamera.docc in Sources */,
+				6811C6072AB36E0100F5C4FE /* ATTrueDepthCameraDelegate.swift in Sources */,
 				860F0D852A946EED009156A5 /* FaceModel.swift in Sources */,
+				6811C60B2AB371B100F5C4FE /* ATTrueDepthCameraView+FaceDetect.swift in Sources */,
 				68CD126A2AB219070045B099 /* ATFaceDetectCameraHandler.swift in Sources */,
 				68CD12732AB21B8D0045B099 /* ATFaceState.swift in Sources */,
+				6811C6052AB36CEC00F5C4FE /* ATTrueDepthCameraView.swift in Sources */,
 				860F0D822A9467FD009156A5 /* CGImage+Extensions.swift in Sources */,
 				68CD12752AB21DBC0045B099 /* ATNormalCameraDelegate.swift in Sources */,
 			);
