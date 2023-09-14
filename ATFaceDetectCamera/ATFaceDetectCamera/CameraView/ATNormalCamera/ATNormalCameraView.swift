@@ -50,7 +50,7 @@ internal class ATNormalCameraView: UIView  {
     
 }
 
-extension ATNormalCameraView {
+extension ATNormalCameraView: ATCameraViewInterface {
     
     func setDelegate(_ delegate: ATCameraDelegate) throws {
         
@@ -61,9 +61,6 @@ extension ATNormalCameraView {
         self.delegate = delegate
     }
     
-}
-
-extension ATNormalCameraView: ATCameraViewInterface {
    
     public func setupCamera() {
         
