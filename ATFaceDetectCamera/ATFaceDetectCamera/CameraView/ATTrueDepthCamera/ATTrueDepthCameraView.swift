@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Vision
 
-internal class ATTrueDepthCameraView: UIView  {
+internal final class ATTrueDepthCameraView: UIView  {
     
     //MARK: UI Component
     
@@ -48,6 +48,9 @@ internal class ATTrueDepthCameraView: UIView  {
                                                          attributes: [],
                                                          autoreleaseFrequency: .workItem)
     
+    /// Validator
+    internal lazy var faceValidator: ATFaceValidator = ATFaceValidator()
+    
     ///Delegate
     fileprivate (set) weak var delegate: ATTrueDepthCameraDelegate? = nil
     internal var startCaptureFace = false
@@ -59,7 +62,7 @@ extension ATTrueDepthCameraView: ATCameraViewInterface {
     func setDelegate(_ delegate: ATCameraDelegate) throws {
         
         guard let delegate = delegate as? ATTrueDepthCameraDelegate else {
-            throw DelegateError.notConformToATTrueDepthCameraDelegate
+            throw ATDelegateError.notConformToATTrueDepthCameraDelegate
         }
         
         self.delegate = delegate

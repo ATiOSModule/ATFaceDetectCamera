@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Vision
 
-internal class ATNormalCameraView: UIView  {
+internal final class ATNormalCameraView: UIView  {
     
     //MARK: UI Component
     
@@ -44,6 +44,9 @@ internal class ATNormalCameraView: UIView  {
                                                   attributes: [],
                                                   autoreleaseFrequency: .workItem)
     
+    /// Validator
+    internal lazy var faceValidator: ATFaceValidator = ATFaceValidator()
+    
     ///Delegate
     fileprivate (set) weak var delegate: ATNormalCameraDelegate? = nil
     internal var startCaptureFace = false
@@ -55,7 +58,7 @@ extension ATNormalCameraView: ATCameraViewInterface {
     func setDelegate(_ delegate: ATCameraDelegate) throws {
         
         guard let delegate = delegate as? ATNormalCameraDelegate else {
-            throw DelegateError.notConformToATNormalCameraDelegate
+            throw ATDelegateError.notConformToATNormalCameraDelegate
         }
         
         self.delegate = delegate
