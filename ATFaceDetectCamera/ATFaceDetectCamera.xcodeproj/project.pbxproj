@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6811C6052AB36CEC00F5C4FE /* ATTrueDepthCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6811C6042AB36CEC00F5C4FE /* ATTrueDepthCameraView.swift */; };
+		6811C6072AB36E0100F5C4FE /* ATTrueDepthCameraDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6811C6062AB36E0100F5C4FE /* ATTrueDepthCameraDelegate.swift */; };
+		6811C6092AB36EA000F5C4FE /* ATTrueDepthCameraView+CameraSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6811C6082AB36EA000F5C4FE /* ATTrueDepthCameraView+CameraSetup.swift */; };
+		6811C60B2AB371B100F5C4FE /* ATTrueDepthCameraView+FaceDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6811C60A2AB371B100F5C4FE /* ATTrueDepthCameraView+FaceDetect.swift */; };
+		681D6EC62AB4A38D007B221F /* ATFaceValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D6EC52AB4A38D007B221F /* ATFaceValidator.swift */; };
 		682FB3092AB1DD31004707E8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682FB3082AB1DD31004707E8 /* UIView+Extensions.swift */; };
 		68CD126A2AB219070045B099 /* ATFaceDetectCameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD12692AB219070045B099 /* ATFaceDetectCameraHandler.swift */; };
-		68CD126C2AB219180045B099 /* ATCameraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD126B2AB219180045B099 /* ATCameraType.swift */; };
 		68CD126E2AB21A050045B099 /* ATCameraViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD126D2AB21A050045B099 /* ATCameraViewInterface.swift */; };
 		68CD12732AB21B8D0045B099 /* ATFaceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD12722AB21B8D0045B099 /* ATFaceState.swift */; };
 		68CD12752AB21DBC0045B099 /* ATNormalCameraDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD12742AB21DBC0045B099 /* ATNormalCameraDelegate.swift */; };
@@ -18,7 +22,6 @@
 		8600152B2A8F5CE20067A008 /* ATNormalCameraView+FaceDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8600152A2A8F5CE20067A008 /* ATNormalCameraView+FaceDetect.swift */; };
 		860F0D802A94675E009156A5 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F0D7F2A94675E009156A5 /* UIImage+Extensions.swift */; };
 		860F0D822A9467FD009156A5 /* CGImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F0D812A9467FD009156A5 /* CGImage+Extensions.swift */; };
-		860F0D852A946EED009156A5 /* FaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F0D842A946EED009156A5 /* FaceModel.swift */; };
 		86AD51E42A83F36C0024B173 /* ATFaceDetectCamera.docc in Sources */ = {isa = PBXBuildFile; fileRef = 86AD51E32A83F36C0024B173 /* ATFaceDetectCamera.docc */; };
 		86AD51E52A83F36C0024B173 /* ATFaceDetectCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 86AD51E22A83F36C0024B173 /* ATFaceDetectCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86AD51F22A83F3890024B173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AD51F12A83F3890024B173 /* AppDelegate.swift */; };
@@ -61,9 +64,13 @@
 /* Begin PBXFileReference section */
 		151936A6F588BD6D4205B91D /* Pods_ATFaceDetectCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATFaceDetectCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		414570250F3658634AB3ABE7 /* Pods-ATFaceDetectCameraDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATFaceDetectCameraDemo.release.xcconfig"; path = "Target Support Files/Pods-ATFaceDetectCameraDemo/Pods-ATFaceDetectCameraDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6811C6042AB36CEC00F5C4FE /* ATTrueDepthCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTrueDepthCameraView.swift; sourceTree = "<group>"; };
+		6811C6062AB36E0100F5C4FE /* ATTrueDepthCameraDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTrueDepthCameraDelegate.swift; sourceTree = "<group>"; };
+		6811C6082AB36EA000F5C4FE /* ATTrueDepthCameraView+CameraSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ATTrueDepthCameraView+CameraSetup.swift"; sourceTree = "<group>"; };
+		6811C60A2AB371B100F5C4FE /* ATTrueDepthCameraView+FaceDetect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ATTrueDepthCameraView+FaceDetect.swift"; sourceTree = "<group>"; };
+		681D6EC52AB4A38D007B221F /* ATFaceValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATFaceValidator.swift; sourceTree = "<group>"; };
 		682FB3082AB1DD31004707E8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		68CD12692AB219070045B099 /* ATFaceDetectCameraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATFaceDetectCameraHandler.swift; sourceTree = "<group>"; };
-		68CD126B2AB219180045B099 /* ATCameraType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCameraType.swift; sourceTree = "<group>"; };
 		68CD126D2AB21A050045B099 /* ATCameraViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCameraViewInterface.swift; sourceTree = "<group>"; };
 		68CD12722AB21B8D0045B099 /* ATFaceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATFaceState.swift; sourceTree = "<group>"; };
 		68CD12742AB21DBC0045B099 /* ATNormalCameraDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATNormalCameraDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +81,6 @@
 		8600152A2A8F5CE20067A008 /* ATNormalCameraView+FaceDetect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ATNormalCameraView+FaceDetect.swift"; sourceTree = "<group>"; };
 		860F0D7F2A94675E009156A5 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		860F0D812A9467FD009156A5 /* CGImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+Extensions.swift"; sourceTree = "<group>"; };
-		860F0D842A946EED009156A5 /* FaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceModel.swift; sourceTree = "<group>"; };
 		86AD51DF2A83F36C0024B173 /* ATFaceDetectCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ATFaceDetectCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86AD51E22A83F36C0024B173 /* ATFaceDetectCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATFaceDetectCamera.h; sourceTree = "<group>"; };
 		86AD51E32A83F36C0024B173 /* ATFaceDetectCamera.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ATFaceDetectCamera.docc; sourceTree = "<group>"; };
@@ -112,6 +118,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6811C6032AB36CC800F5C4FE /* ATTrueDepthCamera */ = {
+			isa = PBXGroup;
+			children = (
+				6811C6062AB36E0100F5C4FE /* ATTrueDepthCameraDelegate.swift */,
+				6811C6042AB36CEC00F5C4FE /* ATTrueDepthCameraView.swift */,
+				6811C6082AB36EA000F5C4FE /* ATTrueDepthCameraView+CameraSetup.swift */,
+				6811C60A2AB371B100F5C4FE /* ATTrueDepthCameraView+FaceDetect.swift */,
+			);
+			path = ATTrueDepthCamera;
+			sourceTree = "<group>";
+		};
 		682FB30A2AB1DED9004707E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,14 +176,6 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		860F0D832A946EE1009156A5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				860F0D842A946EED009156A5 /* FaceModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		86AD51D52A83F36C0024B173 = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +199,6 @@
 		86AD51E12A83F36C0024B173 /* ATFaceDetectCamera */ = {
 			isa = PBXGroup;
 			children = (
-				68CD126B2AB219180045B099 /* ATCameraType.swift */,
 				68CD12692AB219070045B099 /* ATFaceDetectCameraHandler.swift */,
 				86AD520D2A83F5240024B173 /* CameraView */,
 				860F0D7D2A946707009156A5 /* Extensions */,
@@ -227,10 +235,11 @@
 		86AD520D2A83F5240024B173 /* CameraView */ = {
 			isa = PBXGroup;
 			children = (
-				860F0D832A946EE1009156A5 /* Model */,
 				68CD12792AB227730045B099 /* ATCameraDelegate.swift */,
 				68CD126D2AB21A050045B099 /* ATCameraViewInterface.swift */,
 				68CD12722AB21B8D0045B099 /* ATFaceState.swift */,
+				681D6EC52AB4A38D007B221F /* ATFaceValidator.swift */,
+				6811C6032AB36CC800F5C4FE /* ATTrueDepthCamera */,
 				68CD126F2AB21A190045B099 /* ATNormalCamera */,
 			);
 			path = CameraView;
@@ -403,12 +412,15 @@
 				8600152B2A8F5CE20067A008 /* ATNormalCameraView+FaceDetect.swift in Sources */,
 				860015292A8F58010067A008 /* ATNormalCameraView+CameraSetup.swift in Sources */,
 				86AD520C2A83F4A00024B173 /* ATNormalCameraView.swift in Sources */,
-				68CD126C2AB219180045B099 /* ATCameraType.swift in Sources */,
+				6811C6092AB36EA000F5C4FE /* ATTrueDepthCameraView+CameraSetup.swift in Sources */,
 				68CD127A2AB227730045B099 /* ATCameraDelegate.swift in Sources */,
 				86AD51E42A83F36C0024B173 /* ATFaceDetectCamera.docc in Sources */,
-				860F0D852A946EED009156A5 /* FaceModel.swift in Sources */,
+				6811C6072AB36E0100F5C4FE /* ATTrueDepthCameraDelegate.swift in Sources */,
+				681D6EC62AB4A38D007B221F /* ATFaceValidator.swift in Sources */,
+				6811C60B2AB371B100F5C4FE /* ATTrueDepthCameraView+FaceDetect.swift in Sources */,
 				68CD126A2AB219070045B099 /* ATFaceDetectCameraHandler.swift in Sources */,
 				68CD12732AB21B8D0045B099 /* ATFaceState.swift in Sources */,
+				6811C6052AB36CEC00F5C4FE /* ATTrueDepthCameraView.swift in Sources */,
 				860F0D822A9467FD009156A5 /* CGImage+Extensions.swift in Sources */,
 				68CD12752AB21DBC0045B099 /* ATNormalCameraDelegate.swift in Sources */,
 			);

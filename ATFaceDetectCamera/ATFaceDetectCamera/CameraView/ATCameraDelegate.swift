@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum DelegateError: Error {
+public enum ATDelegateError: Error {
     case  notConformToATNormalCameraDelegate
     case  notConformToATTrueDepthCameraDelegate
     case  notConformToATARKitCameraDelegate

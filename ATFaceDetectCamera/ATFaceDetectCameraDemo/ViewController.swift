@@ -8,10 +8,11 @@
 import UIKit
 import ATFaceDetectCamera
 import Vision
+import AVFoundation
 
 class ViewController: UIViewController {
 
-    let cameraView: ATCameraViewInterface = ATFaceDetectCameraHandler.shared.createNormalCamera()
+    let cameraView: ATCameraViewInterface = ATFaceDetectCameraHandler.shared.createTrueDepthCamera()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,14 +45,14 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: ATNormalCameraDelegate {
-    
-    func cameraViewOutput(sender: ATCameraViewInterface, faceImage: UIImage, fullImage: UIImage, boundingBox: CGRect) {
-        print("Success: \(boundingBox)")
+extension ViewController: ATTrueDepthCameraDelegate {
+    func cameraViewOutput(sender: ATCameraViewInterface, result: ATTrueDepthResult) {
+        
     }
     
-    func cameraViewOutput(sender: ATCameraViewInterface, invalidFace: VNFaceObservation, invalidType: ATFaceState) {
-        print("SuccessNot: \(invalidType)")
+    func cameraViewOutput(sender: ATCameraViewInterface, invalidFace: VNFaceObservation, depthData: AVDepthData, invalidType: ATFaceState) {
+        
     }
+    
     
 }

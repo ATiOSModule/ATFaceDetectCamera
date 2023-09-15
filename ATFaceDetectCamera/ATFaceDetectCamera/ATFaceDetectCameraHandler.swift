@@ -9,6 +9,7 @@ import Foundation
 
 public protocol ATIFaceDetectCameraHandler {
     func createNormalCamera() -> ATCameraViewInterface
+    func createTrueDepthCamera() -> ATCameraViewInterface
 }
 
 public final class ATFaceDetectCameraHandler: ATIFaceDetectCameraHandler {
@@ -26,6 +27,13 @@ public extension ATFaceDetectCameraHandler {
     func createNormalCamera() -> ATCameraViewInterface {
         
         let cameraView = ATNormalCameraView()
+        return cameraView
+        
+    }
+    
+    func createTrueDepthCamera() -> ATCameraViewInterface {
+        
+        let cameraView = ATTrueDepthCameraView()
         return cameraView
         
     }

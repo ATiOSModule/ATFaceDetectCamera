@@ -86,7 +86,7 @@ extension ATNormalCameraView {
         }
         
         avSession.commitConfiguration()
-        return
+        
     }
     
 }

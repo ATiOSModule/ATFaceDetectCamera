@@ -1,8 +1,8 @@
 //
-//  ATCameraView.swift
+//  ATTrueDepthCameraView.swift
 //  ATFaceDetectCamera
 //
-//  Created by Wee on 09/08/2023.
+//  Created by Anh Tuấn Nguyễn on 14/09/2023.
 //
 
 import Foundation
@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Vision
 
-internal final class ATNormalCameraView: UIView  {
+internal final class ATTrueDepthCameraView: UIView  {
     
     //MARK: UI Component
     
@@ -18,17 +18,21 @@ internal final class ATNormalCameraView: UIView  {
     ///AVFoundation Camera
     internal lazy var avSession: AVCaptureSession? = nil
 
+   
     internal var videoDataOutput: AVCaptureVideoDataOutput?
+    internal var depthDataOutput: AVCaptureDepthDataOutput?
+    internal var outputSynchronizer: AVCaptureDataOutputSynchronizer?
+    
     internal var previewLayer : AVCaptureVideoPreviewLayer!
     
     let deviceDiscoverySession: AVCaptureDevice.DiscoverySession = {
         
         var camDevice: AVCaptureDevice.DiscoverySession
-        let dualCamera = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: .video, position: .front)
+        let trueDepthCam = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInTrueDepthCamera], mediaType: .video, position: .front)
         
-        if dualCamera.devices.first != nil {
+        if trueDepthCam.devices.first != nil {
             
-            return dualCamera
+            return trueDepthCam
             
         } else {
             
@@ -39,46 +43,47 @@ internal final class ATNormalCameraView: UIView  {
     }()
     
     ///Queue
-    internal let videoOutputQueue = DispatchQueue(label: "videoDataQueue",
-                                                  qos: .userInitiated,
-                                                  attributes: [],
-                                                  autoreleaseFrequency: .workItem)
+    internal let synchronizerOutputQueue = DispatchQueue(label: "synchronizerOutputQueue",
+                                                         qos: .userInitiated,
+                                                         attributes: [],
+                                                         autoreleaseFrequency: .workItem)
     
     /// Validator
     internal lazy var faceValidator: ATFaceValidator = ATFaceValidator()
     
     ///Delegate
-    fileprivate (set) weak var delegate: ATNormalCameraDelegate? = nil
+    fileprivate (set) weak var delegate: ATTrueDepthCameraDelegate? = nil
     internal var startCaptureFace = false
     
 }
 
-extension ATNormalCameraView: ATCameraViewInterface {
+extension ATTrueDepthCameraView: ATCameraViewInterface {
     
     func setDelegate(_ delegate: ATCameraDelegate) throws {
         
-        guard let delegate = delegate as? ATNormalCameraDelegate else {
-            throw ATDelegateError.notConformToATNormalCameraDelegate
+        guard let delegate = delegate as? ATTrueDepthCameraDelegate else {
+            throw ATDelegateError.notConformToATTrueDepthCameraDelegate
         }
         
         self.delegate = delegate
+        
     }
     
-   
-    public func setupCamera() {
+    func setupCamera() {
         
         self.avSession = nil
+        self.depthDataOutput = nil
         self.videoDataOutput = nil
+        self.outputSynchronizer = nil
         
         //MARK: Flow setup camra: Set AVCaptureInput -> Set AVCapture Output -> Set preview layer
         /// if setting  previewLayer = AVCaptureVideoPreviewLayer(session: avSession) before setup out/input of session, preview layer won't show camera because AVCaptureSesison haven't been setted yet
         self.setupCameraInput()
         self.setupCameraOutput()
         self.setupPreviewLayer()
-        
     }
-   
-    public func startCamera() {
+    
+    func startCamera() {
         
         setupCamera()
         startCaptureFace = false
@@ -100,7 +105,7 @@ extension ATNormalCameraView: ATCameraViewInterface {
         
     }
     
-    public func stopCamera() {
+    func stopCamera() {
         if self.avSession != nil {
             self.avSession?.stopRunning()
         }

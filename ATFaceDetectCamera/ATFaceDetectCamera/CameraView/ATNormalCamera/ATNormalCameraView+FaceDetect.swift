@@ -47,17 +47,6 @@ extension ATNormalCameraView {
             
         }
         
-        //VNDetectFaceLandmarksRequest to get roll, yaw, and boundingBox
-//        faceDispatchGroup.enter()
-//        let faceDetectionLandmarRequest = VNDetectFaceLandmarksRequest(completionHandler: { (request: VNRequest, error: Error?) in
-//
-//            if let results = request.results as? [VNFaceObservation] {
-//                faceLandmarkResults = results
-//            }
-//            faceDispatchGroup.leave()
-//
-//        })
-        
         //Handle face response after all request finish
         faceDispatchGroup.notify(queue: .main) { [weak self] in
             
@@ -80,19 +69,15 @@ extension ATNormalCameraView {
     
     fileprivate func handleValidFace(from sampleBuffer: CMSampleBuffer, pixelBuffer: CVPixelBuffer, result: VNFaceObservation) {
         
-        if checkValidCenterFace(result: result) == false {
+        let faceValidationResult = faceValidator.fullyCheckFaceValidation(result: result)
+        if faceValidationResult.isValid == false {
+            self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: faceValidationResult.faceState)
             return
         }
         
-        if checkValidFaceBoundRatio(result: result) == false {
-            return
-        }
-        
-        if checkValidHeadPoseEstimation(result: result) == false {
-            return
-        }
-        
-        self.captureFace(from: sampleBuffer, pixelBuffer: pixelBuffer, result: result)
+        self.captureFace(from: sampleBuffer,
+                         pixelBuffer: pixelBuffer,
+                         result: result)
        
     }
     
@@ -111,99 +96,12 @@ extension ATNormalCameraView {
         let faceImage = UIImage(cgImage: faceCGImage)
         let flipFullImage = UIImage(cgImage: flipFullCGImage)
         
-        self.delegate?.cameraViewOutput(sender: self,
-                                        faceImage: faceImage,
-                                        fullImage: flipFullImage,
-                                        boundingBox: result.boundingBox)
-    }
-    
-}
-
-//MARK: Handle Valid Face
-extension ATNormalCameraView {
-    
-    ///Handle face rol-pitch-yall
-    fileprivate func checkValidHeadPoseEstimation(result: VNFaceObservation) -> Bool {
+        let capturedFaceResult: ATNormalResult = ATNormalResult(faceObservation: result,
+                                                                faceImage: faceImage,
+                                                                fullImage: flipFullImage,
+                                                                boundingBox: result.boundingBox)
         
-        let roll: Double = result.roll?.doubleValue ?? 0
-        let yaw: Double = result.yaw?.doubleValue ?? 0
-        var pitch: Double = 0
-        if #available(iOS 15.0, *) {
-            pitch = result.pitch?.doubleValue ?? 0
-        }
-        
-        let resultRollDegress: Double = 180.0 * roll / Double.pi
-        let resultYawDegress: Double = 180.0 * yaw / Double.pi
-        let resultPitchDegress: Double = 180.0 * pitch / Double.pi
-        
-//        print("Roll : \(resultRollDegress) ~~~~~ Pitch : \(resultPitchDegress)  ~~~~~ Yaw : \(resultYawDegress)")
-     
-        if abs(resultRollDegress) > 20 {
-            
-            if resultRollDegress > 0 {
-                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooLeaningLeft)
-            } else {
-                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooLeaningLeft)
-            }
-            
-            return false
-        }
-        
-        if abs(resultYawDegress) > 20 {
-            
-            if resultYawDegress > 0 {
-                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooLeaningRight)
-            } else {
-                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooLeaningLeft)
-            }
-            
-            return false
-        }
-        
-        if abs(resultPitchDegress) > 15 {
-            
-            if abs(resultPitchDegress) > 0 {
-                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooAlignDown)
-            } else {
-                self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooAlignUp)
-            }
-            
-            return false
-        }
-        
-        return true
-        
-    }
-    
-    fileprivate func checkValidFaceBoundRatio(result: VNFaceObservation) -> Bool {
-
-        let ratio = Int(result.boundingBox.width * 100)
-
-        if ratio < 30 {
-            
-            self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooSmall)
-            return false
-        }
-        
-        if ratio > 60 {
-            self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceTooBig)
-            return false
-        }
-        
-        return true
-    }
-    
-    fileprivate func checkValidCenterFace(result: VNFaceObservation) -> Bool {
-        
-        let resuldCenterX = result.boundingBox.midX
-        let resuldCenterY = result.boundingBox.midY
-        
-        if abs(resuldCenterX - 0.5) > 0.1 || abs(resuldCenterY - 0.5) > 0.1 {
-            self.delegate?.cameraViewOutput(sender: self, invalidFace: result, invalidType: .faceIsNotCenter)
-            return false
-        }
-        
-        return true
+        self.delegate?.cameraViewOutput(sender: self, result: capturedFaceResult)
         
     }
     
